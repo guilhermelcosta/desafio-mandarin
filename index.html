@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MandaTrends</title>
+
+    <style>
+        * {
+            font-family: Verdana, serif;
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            width: 100%;
+            padding: 10px;
+        }
+
+        .header img {
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .news-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+            padding: 0 35px;
+            gap: 0 16px;
+        }
+
+        .news-container .article-source {
+            font-style: italic;
+            font-size: 11px;
+            color: #B2B2B2;
+        }
+
+        .news-container .main-article {
+            grid-row: 1;
+            grid-column: span 2;
+        }
+
+        .news-container .main-article img {
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .news-container .main-article .article-title {
+            font-size: 23px;
+            margin: 10px 0 17px 0;
+        }
+
+        .news-container .main-article .article-subtitle {
+            color: #74787A;
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+
+        .news-container .main-article .article-source:after {
+            content: " ";
+            display: block;
+            width: 249px;
+            height: 4px;
+            margin: 10px 0 37px 0;
+            background: rgb(235, 0, 107);
+            background: linear-gradient(90deg, rgba(235, 0, 107, 1) 0%, rgba(37, 9, 121, 1) 100%);
+        }
+
+        .news-container .article {
+            grid-row: 2;
+        }
+
+        .news-container .article img {
+            width: 100%;
+        }
+
+        .news-container .article .article-title {
+            font-size: 18px;
+            margin: 10px 0 17px 0;
+            height: calc(1em * 4);
+        }
+
+        .news-container .article:nth-of-type(2) .article-source:after {
+            content: "";
+            display: block;
+            width: 155px;
+            height: 4px;
+            margin: 10px 0 19px 0;
+            background: rgb(0, 214, 205);
+            background: linear-gradient(90deg, rgba(0, 214, 205, 1) 0%, rgba(150, 9, 170, 1) 100%);
+        }
+
+        .news-container .article:nth-of-type(3) .article-source:after {
+            content: "";
+            display: block;
+            width: 155px;
+            height: 4px;
+            margin: 10px 0 19px 0;
+            background: rgb(0, 214, 205);
+            background: linear-gradient(90deg, rgba(0, 214, 205, 1) 0%, rgba(9, 170, 60, 1) 100%);
+        }
+
+        .footer {
+            text-align: center;
+        }
+
+        .footer img {
+            display: block;
+            margin: 0 auto 22px 0;
+            width: 100%;
+        }
+
+        @media (max-width: 575.98px) {
+            .news-container {
+                grid-template-rows: repeat(2, 1fr);
+            }
+
+            .news-container .article {
+                grid-column: span 2;
+            }
+
+            .news-container .article:nth-of-type(2) {
+                grid-row: 2;
+            }
+
+            .news-container .article:nth-of-type(3) {
+                grid-row: 3;
+            }
+
+            .news-container .article .article-title {
+                height: calc(1em * 2.5);
+            }
+        }
+    </style>
+</head>
+
+<body>
+<header class="header">
+    <img src="img/img-header.jpg" alt="Manda Trends">
+</header>
+
+<section class="news-container">
+    <article class="main-article">
+        <img src="img/img-nrf.jpg" alt="NRF 2020: conheça os top 5 assuntos do evento">
+        <h1 class="article-title">NRF 2020: conheça os top 5 assuntos do evento</h1>
+        <p class="article-subtitle">O maior evento sobre varejo do mundo monstrando tendências, oportunidades e
+            inovações para o setor.</p>
+        <p class="article-source">Fonte: CMO ADOBE</p>
+    </article>
+
+    <article class="article">
+        <img src="img/img-nba.jpg" alt="Petição para colocar Kobe Bryant no logo da NBA">
+        <h1 class="article-title">Petição para colocar Kobe Bryant no logo da NBA.</h1>
+        <p class="article-source">Fonte: Dayle Mail</p>
+    </article>
+
+    <article class="article">
+        <img src="img/img-whatsapp.jpg" alt="WhatsApp terá função de pagamentos em 2020">
+        <h1 class="article-title">WhatsApp terá função de pagamentos em 2020.</h1>
+        <p class="article-source">Fonte: Proxxima</p>
+    </article>
+</section>
+
+<footer class="footer">
+    <img src="img/img-footer.jpg" alt="Mandarin | We design for shopper">
+    <small> Copyright &copf; Mandarin. Todos os direitos reservados.<br>Caso não deseje mais receber nossos e-mails, por
+        favor <a href="#">clique aqui</a>.</small>
+</footer>
+</body>
+</html>
